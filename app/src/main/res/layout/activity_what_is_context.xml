@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/what_is_context_container">
+
+    <Button
+        android:id="@+id/context_start_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Start Activity!!"/>
+
+    <Button
+        android:id="@+id/context_send_broadcast"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Send Broadcast"/>
+
+    <Button
+        android:id="@+id/context_inflate_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Inflate layout(Add view)"/>
+
+    <Button
+        android:id="@+id/context_get_resource_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Get resource (String)"/>
+
+    <Button
+        android:id="@+id/context_get_device_storage_read_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Read!! (storage access)"/>
+    <Button
+        android:id="@+id/context_get_device_storage_write_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Write!! (storage access)"/>
+    <Button
+        android:id="@+id/context_get_device_storage_delete_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Delete!! (storage access)"/>
+    <Button
+        android:id="@+id/context_system_service_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="GetSystemService (location)"/>
+
+    <TextView
+        android:id="@+id/context_information"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>
