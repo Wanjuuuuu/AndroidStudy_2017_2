@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.wanjukim.myapplication.week1.WhatIsContextActivity;
+import com.example.wanjukim.myapplication.practice.SlidingViewActivity;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -30,6 +31,7 @@ public class StudyListAdapter extends RecyclerView.Adapter<StudyListAdapter.Stud
     private List<Class> studyList = new ArrayList<>();
     private Class[] studyArray = {
             WhatIsContextActivity.class,
+            SlidingViewActivity.class,
     };
 
     public StudyListAdapter(Context context) {

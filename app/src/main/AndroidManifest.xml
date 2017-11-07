@@ -23,6 +23,7 @@
         </activity>
         <activity android:name=".week1.WhatIsContextActivity"/>
         <activity android:name=".week1.NewActivity"/>
+        <activity android:name=".practice.SlidingViewActivity"/>
     </application>
 
 </manifest>
