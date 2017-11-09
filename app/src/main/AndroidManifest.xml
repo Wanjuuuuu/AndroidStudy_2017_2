@@ -25,6 +25,7 @@
         <activity android:name=".week1.NewActivity"/>
         <activity android:name=".practice.SlidingViewActivity"/>
         <activity android:name=".practice.ScrollActivity"/>
+        <activity android:name=".week2.SwipeViewAcitivity"/>
     </application>
 
 </manifest>
