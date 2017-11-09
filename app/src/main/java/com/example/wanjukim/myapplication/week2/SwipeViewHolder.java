@@ -21,6 +21,7 @@ public class SwipeViewHolder extends AbstractSwipeableItemViewHolder {
         textView = itemView.findViewById(R.id.view_text);
     }
 
+    //Gets the container view for the swipeable area
     @Override
     public View getSwipeableContainerView() {
         return containerView;

@@ -64,6 +64,7 @@ public class SwipeViewAdapter extends RecyclerView.Adapter<SwipeViewHolder> impl
         notifyDataSetChanged();
     }
 
+    // Called when item is swiped
     @Override
     public SwipeResultAction onSwipeItem(SwipeViewHolder holder, int position, @SwipeableItemResults int result) {
         if (result == Swipeable.RESULT_CANCELED) {
@@ -73,11 +74,13 @@ public class SwipeViewAdapter extends RecyclerView.Adapter<SwipeViewHolder> impl
         }
     }
 
+    // Called when user is attempt to swipe the item
     @Override
     public int onGetSwipeReactionType(SwipeViewHolder holder, int position, int x, int y) {
         return Swipeable.REACTION_CAN_SWIPE_BOTH_H;
     }
 
+    // Called when sets background of the swiping item
     @Override
     public void onSetSwipeBackground(SwipeViewHolder holder, int position, @SwipeableItemDrawableTypes int type) {
     }

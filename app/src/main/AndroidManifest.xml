@@ -26,6 +26,7 @@
         <activity android:name=".practice.SlidingViewActivity"/>
         <activity android:name=".practice.ScrollActivity"/>
         <activity android:name=".week2.SwipeViewAcitivity"/>
+        <activity android:name=".week2.ButterKnifeActivity"/>
     </application>
 
 </manifest>

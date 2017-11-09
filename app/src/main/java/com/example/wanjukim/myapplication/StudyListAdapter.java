@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.wanjukim.myapplication.week1.WhatIsContextActivity;
+import com.example.wanjukim.myapplication.week2.ButterKnifeActivity;
 import com.example.wanjukim.myapplication.week2.SwipeViewAcitivity;
 
 import java.util.ArrayList;
@@ -32,6 +33,7 @@ public class StudyListAdapter extends RecyclerView.Adapter<StudyListAdapter.Stud
     private Class[] studyArray = {
             WhatIsContextActivity.class,
             SwipeViewAcitivity.class,
+            ButterKnifeActivity.class,
     };
 
     public StudyListAdapter(Context context) {

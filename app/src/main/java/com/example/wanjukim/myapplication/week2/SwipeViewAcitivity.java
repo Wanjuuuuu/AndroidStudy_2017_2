@@ -23,10 +23,10 @@ public class SwipeViewAcitivity extends AppCompatActivity {
 
         RecyclerView recyclerView = findViewById(R.id.swipe_recycler_view);
 
-        RecyclerViewSwipeManager swipeManager = new RecyclerViewSwipeManager();
+        RecyclerViewSwipeManager swipeManager = new RecyclerViewSwipeManager(); // provides item swipe operation for recyclerview
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setAdapter(swipeManager.createWrappedAdapter(new SwipeViewAdapter()));
+        recyclerView.setAdapter(swipeManager.createWrappedAdapter(new SwipeViewAdapter())); // wrap한번 더
 
         swipeManager.attachRecyclerView(recyclerView);
     }
