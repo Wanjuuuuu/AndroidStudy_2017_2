@@ -2,6 +2,7 @@ package com.example.wanjukim.myapplication.week2;
 
 import android.view.View;
 import android.widget.FrameLayout;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.wanjukim.myapplication.R;
@@ -12,7 +13,7 @@ import com.h6ah4i.android.widget.advrecyclerview.utils.AbstractSwipeableItemView
  */
 
 public class SwipeViewHolder extends AbstractSwipeableItemViewHolder {
-    FrameLayout containerView;
+    LinearLayout containerView;
     TextView textView;
 
     public SwipeViewHolder(View itemView) {

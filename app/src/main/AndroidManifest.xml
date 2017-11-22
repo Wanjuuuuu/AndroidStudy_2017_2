@@ -9,6 +9,7 @@
 
     <application
         android:allowBackup="true"
+        android:name=".AndroidApplication"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
@@ -27,6 +28,7 @@
         <activity android:name=".practice.ScrollActivity"/>
         <activity android:name=".week2.SwipeViewAcitivity"/>
         <activity android:name=".week2.ButterKnifeActivity"/>
+        <activity android:name=".week3.RealmTestActivity"/>
     </application>
 
 </manifest>
