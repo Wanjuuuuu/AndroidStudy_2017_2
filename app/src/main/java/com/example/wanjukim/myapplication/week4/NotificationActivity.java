@@ -11,6 +11,7 @@ import android.support.v4.app.TaskStackBuilder;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
 
+import com.example.wanjukim.myapplication.MainActivity;
 import com.example.wanjukim.myapplication.R;
 
 import butterknife.BindView;
@@ -37,6 +38,16 @@ public class NotificationActivity extends AppCompatActivity {
         /* 알림에 대한 UI정보와 작업 지정 */
         NotificationCompat.Builder builder=new NotificationCompat.Builder(this,"default")
                 .setSmallIcon(R.drawable.push_icon).setContentTitle("Hey Dude").setContentText("Click this");
+        builder.setAutoCancel(true); // When clicking, notification in status bar will disappear
+
+        /* heads up 기능 알림 추가 */
+        Intent headsupIntent=new Intent();
+
+        headsupIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        headsupIntent.setClass(this, NotificationActivity.class);
+
+        PendingIntent fullScreenPendingIntent=PendingIntent.getActivity(this,0,headsupIntent,PendingIntent.FLAG_CANCEL_CURRENT);
+        builder.setFullScreenIntent(fullScreenPendingIntent,true); // Pending intent to launch in screen, not only in status bar
 
         /* 알림과 연결될 activity를 intent로 */
         Intent intent=new Intent(this,NotificationResultActivity.class);
@@ -47,7 +58,7 @@ public class NotificationActivity extends AppCompatActivity {
         stackBuilder.addNextIntent(intent);
         PendingIntent pendingIntent=stackBuilder.getPendingIntent(0,PendingIntent.FLAG_UPDATE_CURRENT);
 
-        builder.setContentIntent(pendingIntent);
+        builder.setContentIntent(pendingIntent); // Supply a PendingIntent to send when the notification is clicked
 
         /* 알림ID가 다른 경우, 복수의 동일한 알림이 가능해짐 */
         int notifyID=11;
