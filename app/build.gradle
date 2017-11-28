@@ -34,7 +34,6 @@ dependencies {
     compile ('com.h6ah4i.android.widget.advrecyclerview:advrecyclerview:0.11.0@aar'){
         transitive=true
     }
-
     compile 'com.android.support:appcompat-v7:27.0.0'
     compile 'com.android.support:recyclerview-v7:27.0.0'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
