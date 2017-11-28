@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="notification_button">Push</string>
+    <string name="notification_result_text">This is an extended info about the notification.</string>
 </resources>

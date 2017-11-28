@@ -29,6 +29,8 @@
         <activity android:name=".week2.SwipeViewAcitivity"/>
         <activity android:name=".week2.ButterKnifeActivity"/>
         <activity android:name=".week3.RealmTestActivity"/>
+        <activity android:name=".week4.NotificationActivity"/>
+        <activity android:name=".week4.NotificationResultActivity"/>
     </application>
 
 </manifest>

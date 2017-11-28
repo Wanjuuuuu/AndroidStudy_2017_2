@@ -14,6 +14,7 @@ import com.example.wanjukim.myapplication.week1.WhatIsContextActivity;
 import com.example.wanjukim.myapplication.week2.ButterKnifeActivity;
 import com.example.wanjukim.myapplication.week2.SwipeViewAcitivity;
 import com.example.wanjukim.myapplication.week3.RealmTestActivity;
+import com.example.wanjukim.myapplication.week4.NotificationActivity;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -36,6 +37,7 @@ public class StudyListAdapter extends RecyclerView.Adapter<StudyListAdapter.Stud
             SwipeViewAcitivity.class,
             ButterKnifeActivity.class,
             RealmTestActivity.class,
+            NotificationActivity.class,
     };
 
     public StudyListAdapter(Context context) {
