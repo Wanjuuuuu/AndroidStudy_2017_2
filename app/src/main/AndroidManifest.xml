@@ -30,7 +30,14 @@
         <activity android:name=".week2.ButterKnifeActivity"/>
         <activity android:name=".week3.RealmTestActivity"/>
         <activity android:name=".week4.NotificationActivity"/>
-        <activity android:name=".week4.NotificationResultActivity"/>
+        <activity
+            android:name=".week4.NotificationResultActivity"
+            android:parentActivityName=".week4.NotificationActivity">
+            <meta-data
+                android:name="=android.support.PARENT_ACTIVITY"
+                android:value=".week4.NotificationActivity">
+            </meta-data>
+        </activity>
         <activity android:name=".week4.ResultActivity1"/>
         <activity android:name=".week4.ResultActivity2"/>
     </application>
