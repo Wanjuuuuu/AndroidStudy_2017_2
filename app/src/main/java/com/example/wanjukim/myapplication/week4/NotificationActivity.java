@@ -9,6 +9,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.TaskStackBuilder;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.widget.Button;
 
 import com.example.wanjukim.myapplication.MainActivity;
@@ -25,6 +26,8 @@ import butterknife.OnClick;
 public class NotificationActivity extends AppCompatActivity {
     @BindView(R.id.notify_button)Button button;
 
+    private static final String TAG="Thread Exception";
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,7 +39,7 @@ public class NotificationActivity extends AppCompatActivity {
     @OnClick(R.id.notify_button)
     public void onClickButton(){
         /* 알림에 대한 UI정보와 작업 지정 */
-        NotificationCompat.Builder builder=new NotificationCompat.Builder(this,"default")
+        final NotificationCompat.Builder builder=new NotificationCompat.Builder(this,"default")
                 .setSmallIcon(R.drawable.push_icon).setContentTitle("Hey Dude").setContentText("Click this");
         builder.setAutoCancel(true); // When clicking, notification in status bar will disappear
 
@@ -65,10 +68,29 @@ public class NotificationActivity extends AppCompatActivity {
         builder.setContentIntent(pendingIntent); // Supply a PendingIntent to send when the notification is clicked
 
         /* 알림ID가 다른 경우, 복수의 동일한 알림이 가능해짐 */
-        int notifyID=11;
+        final int notifyID=11;
 
         /* Notification 객체를 전달해서 알림 발행 */
-        NotificationManager notificationManager=(NotificationManager)getSystemService(Context.NOTIFICATION_SERVICE);
-        notificationManager.notify(notifyID,builder.build());
+        final NotificationManager notificationManager=(NotificationManager)getSystemService(Context.NOTIFICATION_SERVICE);
+//        notificationManager.notify(notifyID,builder.build());
+
+        /* 고정기간 진행 상태 표시 */
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                int incr;
+                for(incr=0;incr<=20;incr+=5){
+                    builder.setProgress(20,incr,false); // max가 20될 때까지 progress
+                    notificationManager.notify(notifyID,builder.build());
+                    try{
+                        Thread.sleep(5*1000); // 5초 동안 지연
+                    }catch (InterruptedException e){
+                        Log.d(TAG,"sleep failure");
+                    }
+                }
+                builder.setContentText("Download complete").setProgress(0,0,false);
+                notificationManager.notify(notifyID,builder.build());
+            }
+        }).start();
     }
 }
