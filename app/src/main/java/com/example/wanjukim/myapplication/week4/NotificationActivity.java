@@ -51,11 +51,15 @@ public class NotificationActivity extends AppCompatActivity {
 
         /* 알림과 연결될 activity를 intent로 */
         Intent intent=new Intent(this,NotificationResultActivity.class);
+        Intent intent1=new Intent(this,ResultActivity1.class);
+        Intent intent2=new Intent(this,ResultActivity2.class);
 
         /* stack builder로 이전 탐색 보존 */
         TaskStackBuilder stackBuilder=TaskStackBuilder.create(this);
         stackBuilder.addParentStack(NotificationResultActivity.class);
         stackBuilder.addNextIntent(intent);
+        stackBuilder.addNextIntent(intent1);
+        stackBuilder.addNextIntent(intent2);
         PendingIntent pendingIntent=stackBuilder.getPendingIntent(0,PendingIntent.FLAG_UPDATE_CURRENT);
 
         builder.setContentIntent(pendingIntent); // Supply a PendingIntent to send when the notification is clicked

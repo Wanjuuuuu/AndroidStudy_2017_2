@@ -31,6 +31,8 @@
         <activity android:name=".week3.RealmTestActivity"/>
         <activity android:name=".week4.NotificationActivity"/>
         <activity android:name=".week4.NotificationResultActivity"/>
+        <activity android:name=".week4.ResultActivity1"/>
+        <activity android:name=".week4.ResultActivity2"/>
     </application>
 
 </manifest>
